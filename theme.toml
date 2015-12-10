@@ -1,13 +1,19 @@
-name = "Steam"
+name = "Hasamap"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = "A minimal theme for bloggers."
-homepage = "//github.com/digitalcraftsman/hugo-steam-theme"
+licenselink = "https://github.com/jwerts/hugo-theme-hasamap/blob/master/LICENSE.md"
+description = "Steam + a map and personal changes"
+homepage = ""
 tags = ["google analytics", "google glus", "disqus", "ghost", "blog", "minimal", "custom themes", "single column"]
 features = ["", ""]
 min_version = 0.14
 
+# Many changes to Steam for custom theme.
 [author]
+  name = "Josh Werts"
+  homepage = "//github.com/jwerts"
+
+# Author who ported steam theme to Hugo
+[[original]]
   name = "Digitalcraftsman"
   homepage = "//github.com/digitalcraftsman/"
 
