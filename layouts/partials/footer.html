@@ -1,15 +1,18 @@
 <footer class="site-footer">
 	<div class="inner">
 		<section class="footer-social">
+      {{ with .Site.Params.email }}
+        <a href="mailto:{{ . }}" target="_top" title="Email"><i class="fa fa-2x fa-fw fa-envelope"></i> <span class="hidden">Email</span></a>&nbsp;
+      {{ end }}
 			{{ with .Site.Params.twitter }}
 		    <a href="//twitter.com/{{ . }}" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
-		    {{ end }}
-		    {{ with .Site.Params.github }}
-		    <a href="//github.com/{{ . }}" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
-		    {{ end }}
-        {{ with .Site.Params.instagram }}
-        <a href="//www.instagram.com/{{ . }}" target="_blank" title="Instagram"><i class="fa fa-2x fa-fw fa-instagram"></i><span class="hidden">instagram</span></a>&nbsp;
-        {{ end }}
+	    {{ end }}
+	    {{ with .Site.Params.github }}
+	    <a href="//github.com/{{ . }}" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
+	    {{ end }}
+      {{ with .Site.Params.instagram }}
+      <a href="//www.instagram.com/{{ . }}" target="_blank" title="Instagram"><i class="fa fa-2x fa-fw fa-instagram"></i><span class="hidden">instagram</span></a>&nbsp;
+      {{ end }}
 		    <a href="{{ .RSSlink }}" target="_blank" title="RSS"><i class="fa fa-2x fa-fw fa-rss"></i> <span class="hidden">RSS</span></a>
 		</section>
 
