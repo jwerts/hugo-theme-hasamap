@@ -41,15 +41,19 @@
 	            </a>
 	        </section>
 
-      			{{ if eq .Site.Params.comments "disqus" }}
-              <div style="margin-top:50px">
-  	        	    {{ template "_internal/disqus.html" . }}
-              </div>
-  	        {{ end }}
+            {{ if not .Params.nocomment }}
 
-      			{{ if eq .Site.Params.comments "googleplus" }}
-      				{{ partial "googleplus-comments" . }}
-      			{{ end }}
+        			{{ if eq .Site.Params.comments "disqus" }}
+                <div style="margin-top:50px">
+    	        	    {{ template "_internal/disqus.html" . }}
+                </div>
+    	        {{ end }}
+
+        			{{ if eq .Site.Params.comments "googleplus" }}
+        				{{ partial "googleplus-comments" . }}
+        			{{ end }}
+
+            {{ end }}
 
 	        <footer class="post-footer">
 	            {{ partial "author" . }}
